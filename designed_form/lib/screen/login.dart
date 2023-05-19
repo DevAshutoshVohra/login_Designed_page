@@ -18,13 +18,14 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[350],
-      appBar: AppBar(
-        title: const Text(' Login Screen '),
-      ),
       body: SafeArea(
         child: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              const SizedBox(
+                height: 30,
+              ),
               const Icon(
                 Icons.smart_display_outlined,
                 size: 100,
@@ -36,7 +37,7 @@ class _LoginState extends State<Login> {
                 ' Welcome Back You\'ve Been Missed ',
                 style: TextStyle(
                   fontSize: 16,
-                  color: Color.fromARGB(255, 132, 131, 131),
+                  color: Color.fromARGB(255, 18, 17, 17),
                 ),
               ),
               const SizedBox(
@@ -87,15 +88,29 @@ class _LoginState extends State<Login> {
                 ],
               ),
 
-const SizedBox(
-                height: 25,
+              const SizedBox(
+                height: 40,
               ),
               //  Apple and Google Buttons
-              Row(mainAxisAlignment: MainAxisAlignment.center,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
-                      SquareTileImage(src: 'lib/images/google.png'),
-                      SizedBox(width: 20),
-                      SquareTileImage(src: 'lib/images/apple.png'),
+                  SquareTileImage(src: 'lib/images/google.png'),
+                  SizedBox(width: 20),
+                  SquareTileImage(src: 'lib/images/apple.png'),
+                ],
+              ),
+              const SizedBox(
+                height: 40,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  Text(' Not a member ? '),
+                  Text(
+                    'Register Now ',
+                    style: TextStyle(color: Colors.blue),
+                  ),
                 ],
               )
             ],
